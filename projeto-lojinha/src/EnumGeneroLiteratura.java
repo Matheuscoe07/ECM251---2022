@@ -1,0 +1,3 @@
+public enum EnumGeneroLiteratura {
+    TERROR, DRAMA, ROMANCE, COMEDIA, ACAO, SUSPENSE, ENGENAHRIA, SCIFI, CYBERPUNK;
+}
