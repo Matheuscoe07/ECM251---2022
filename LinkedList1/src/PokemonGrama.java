@@ -6,6 +6,12 @@ public class PokemonGrama extends Pokemon {
     
     @Override
     public boolean evoluir(Status status) {
-        return false;
+        if (status == null)
+            return false;
+        Status atual = super.getStatus();
+        atual = super.somarStatus(atual, status);
+        atual = super.somarStatus(atual, new Status(20, 10, 10, 20));
+        super.setStatus(atual);
+        return true;
     }
 }

@@ -26,4 +26,12 @@ public class Status {
     public int getVelocidade() {
         return velocidade;
     }
+
+    @Override
+    public String toString() {
+        return "Status [ataque=" + ataque + ", defesa=" + defesa + ", velocidade=" + velocidade + ", vida=" + vida
+                + "]";
+    }
+
+    
 }

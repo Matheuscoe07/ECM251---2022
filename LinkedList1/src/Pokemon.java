@@ -1,7 +1,7 @@
-public abstract class Pokemon {
+public abstract class Pokemon implements Evoluir {
     private final int numero;
     private final String nome;
-    private final Status status;
+    private Status status;
     
     public Pokemon(int numero, String nome, Status status) {
         this.numero = numero;
@@ -17,8 +17,26 @@ public abstract class Pokemon {
         return nome;
     }
 
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Pokemon [nome=" + nome + ", numero=" + numero + ", status=" + status + "]";
+    }
+
+    @Override
+    public Status somarStatus(Status status1, Status status2) {
+        Status retorno = new Status(
+                status1.getVida() + status2.getVida(),
+                status1.getAtaque() + status2.getAtaque(),
+                status1.getDefesa() + status2.getDefesa(),
+                status1.getVelocidade() + status2.getVelocidade());
+        return retorno;
     }
 }

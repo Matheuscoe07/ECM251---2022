@@ -11,5 +11,7 @@ public class PokemonAgua extends Pokemon {
         Status atual = super.getStatus();
         atual = super.somarStatus(atual, status);
         atual = super.somarStatus(atual, new Status(0,0,10,0));
+        super.setStatus(atual);
+        return true;
     }
 }
