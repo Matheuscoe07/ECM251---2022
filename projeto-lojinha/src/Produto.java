@@ -1,9 +1,9 @@
-public abstract class Produto {
+public abstract class Produto implements IGerarDesconto {
     private final double preco;
     private int quantidade;
     private final String descricao;
     private final String nome;
-    
+
     public Produto(double preco, int quantidade, String descricao, String nome) {
         this.preco = preco;
         this.quantidade = quantidade;

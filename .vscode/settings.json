@@ -1,7 +1,8 @@
 {
     "java.project.sourcePaths": [
+        "LinkedList1/src",
         "LinkedList-Collections/src",
         "Estudo-Collections/src",
-        "LinkedList1/src"
+        "projeto-lojinha/src"
     ]
 }

@@ -3,7 +3,7 @@ public class Comida extends Produto {
     private final String origem;
     private final EnumAlergias alergias;
     private final EnumTipoComida tipo;
-    
+
     public Comida(double preco, int quantidade, String descricao, String nome, double peso, String origem,
             EnumAlergias alergias, EnumTipoComida tipo) {
         super(preco, quantidade, descricao, nome);
@@ -27,5 +27,10 @@ public class Comida extends Produto {
 
     public EnumTipoComida getTipo() {
         return tipo;
+    }
+
+    @Override
+    public double gerarPrecoComDesconto() {
+        return getPreco() * 0.95;
     }
 }

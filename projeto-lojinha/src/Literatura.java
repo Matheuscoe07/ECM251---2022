@@ -4,8 +4,7 @@ public class Literatura extends Produto {
     private final int paginas;
     private final EnumGeneroLiteratura genero;
     
-    public Literatura(double preco, int quantidade, String descricao, String nome, String editora, String autor,
-            int paginas, EnumGeneroLiteratura genero) {
+    public Literatura(double preco, int quantidade, String descricao, String nome, String editora, String autor, int paginas, EnumGeneroLiteratura genero) {
         super(preco, quantidade, descricao, nome);
         this.editora = editora;
         this.autor = autor;
@@ -27,5 +26,10 @@ public class Literatura extends Produto {
 
     public EnumGeneroLiteratura getGenero() {
         return genero;
+    }
+
+    @Override
+    public double gerarPrecoComDesconto() {
+        return getPreco();
     }
 }
