@@ -1,0 +1,58 @@
+PONTOS CHAVE
+- Main só roda o sistema
+- Cada membro tem uma mensagem
+- Cada membro tem uma função mas todos compartilham de coisas em comum (herança)
+- Interface IPostarMensagem
+- Verificar horário (se ta no expediente ou se é hr extra)
+- sistema
+    - registrar membros
+    - informar a hr de trabalho e postar mensagem
+    - mudarTurno()
+- cadastro por nome de usuário, email e função
+
+O SISTEMA DEVE IMPLEMENTAR:
+- Cadastrar um usuário para cada cargo;
+- Postar uma mensagem para cada funcionário;
+- Trocar o horário de trabalho de regular para “extra”;
+- Postar novamente um mensagem para cada funcionário;
+- Voltar o horário de trabalho para regular;
+- Excluir um “Heavy Lifter” e um “Script Guys”;
+- Postar uma mensagem com todos cadastrados;
+- Encerrar o sistema.
+
+CLASSES
+Main.java (OK)
+- só roda o sistema
+
+Sistema.java
+- LinkedList dos membros
+- adicionar cada membro
+- executar postarMensagem
+- executar mudarTurno (extra e normal)
+- remover os membros
+    - heavylifter
+    - scriptguy
+- obviamente printar tudo
+
+IPostarMensagem.java (OK)
+- Interface
+- só puxa o postarMensagem
+
+Membro.java (OK)
+- implements IPostarMensagem
+- nome, email, Funcao funcao, Turno turno
+- getters e setters
+- toString
+- construtores
+
+MobileMembers.java, HeavyLifters.java, ScriptGuys.java, BigBrothers.java (OK)
+- puxa o Membro
+- da um super no construtor
+- postarMensagem com override com as mensagens
+- toString
+
+Turno.java (OK)
+- enum
+
+Funcao.java (OK)
+- enum
