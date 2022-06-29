@@ -1,13 +1,13 @@
+
 public class Tesoura extends Jogada {
-    private String tipo;
-    public Tesoura(String venco, String perco){
-        super(venco, perco);
-        tipo = "Tesoura";
+
+    public Tesoura() {
+        super("Papel");
     }
+
     @Override
-    public boolean verificarVenceu(Jogada jogada) {
-        if(jogada.)
-        return false;
+    public String getTipo() {
+        return "Tesoura";
     }
-    
+
 }

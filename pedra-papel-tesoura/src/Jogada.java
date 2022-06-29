@@ -1,13 +1,17 @@
 public class Jogada {
-    private Jogada venco;
-    private Jogada perco;
-    
-    public Jogada(Jogada venco, Jogada perco) {
+    private String venco;
+
+    public Jogada(String venco) {
         this.venco = venco;
-        this.perco = perco;
     }
 
-    public boolean verificarVenceu(Jogada jogada){
-        
+    public boolean verificarVenceu(Jogada jogada) {
+        if (jogada.getTipo().equals(venco))
+            return true;
+        return false;
+    }
+
+    public String getTipo() {
+        return "Jogada";
     }
 }
