@@ -1,0 +1,57 @@
+***INICIAIS DAS TABELAS***
+
+CREATE TABLE Produtos(
+	  id TEXT NOT NULL,
+  	nome TEXT NOT NULL,
+  	preco REAL NOT NULL
+);
+
+INSERT INTO Produtos VALUES
+  ("SMW-SNES","Super Mario World - SNES",100),
+  ("STH-MD","Sonic the Hedgehog - Mega Drive",100),
+  ("DK3-SNES","Donkey Kong Country 3 - SNES",100),
+  ("PKMNS-GBC","Pokemon Silver - GB Color",100),
+  ("LOZOT-N64","Legend of Zelda: Ocarina of time - N64",100),
+  ("PKMNP-NDS","Pokemon Platinum - NDS",100),
+  ("CB-PS1","Crash Bandicoot - PS1",100),
+  ("DK-SNES","Donkey Kong Country - SNES",100);
+
+SELECT * FROM Produtos 
+
+------------------------------------------------------------------------
+
+create TABLE Usuarios(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+  	nome TEXT NOT NULL,
+  	email TEXT NOT NULL,
+  	senha TEXT NOT NULL
+);
+
+INSERT INTO Usuarios VALUES
+	("0", "ADMIN", "admin@admin.com", "1234"),
+  ("1", "Professor", "murilo@maua.br", "abcd");
+
+SELECT * FROM Usuarios
+
+------------------------------------------------------------------------
+
+CREATE TABLE Carrinho(
+	  id TEXT,
+  	nome TEXT,
+  	preco REAL
+);
+
+# if x in carrinho:
+st.write("**Nome do jogo x**")
+st.write("~Valor antigo do jogo~ → Valor novo do jogo")
+st.write("―――――――――――――――――――――――――――――――――――――――――――――――――――――――")
+
+# if y in carrinho:
+st.write("**Nome do jogo y**")
+st.write("~Valor antigo do jogo~ → Valor novo do jogo")
+st.write("―――――――――――――――――――――――――――――――――――――――――――――――――――――――")
+
+# if z in carrinho:
+st.write("**Nome do jogo z**")
+st.write("~Valor antigo do jogo~ → Valor novo do jogo")
+st.write("―――――――――――――――――――――――――――――――――――――――――――――――――――――――")
